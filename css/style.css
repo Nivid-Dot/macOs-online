@@ -1,0 +1,546 @@
+@font-face {
+    font-family: pixelFont;
+    src: url(../font/8-BIT\ WONDER.TTF);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(32,33,36,1);
+
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+h1 {
+    padding: 20px;
+    margin: 0px;
+    color:blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    font-size: 70px;
+}
+
+h2 {
+    padding: 5px;
+    margin: 0px;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+h3 {
+    color: black;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+h4 {
+    margin: 0px;
+    color: white;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h5 {
+    margin: 20px;
+    color: white;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h6 {
+    margin: 0px;
+    color: gray;
+    font-weight: bold;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 12px;
+    position: absolute;
+    top: 55px;
+    left: 16px;
+}
+
+h7
+{
+    margin: 0px;
+    color: gray;
+    font-weight: bold;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 12px;
+    position: relative;
+    top: 55px;
+    left: -31px; 
+}
+
+.navbar {
+    background-color: red;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+
+    transform: scale3d(2.0, 1.2, 1.2);
+}
+
+.navbar a.smoothrotate {
+    background-color: red;
+    color:black;
+
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.navbar a.smoothrotate:hover {
+    transform:rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+.navbar a.smoothhover {
+    background-color: red;
+    color: black;
+
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.navbar A.smoothhover:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.navbar a.active {
+    background-color: blue;
+}
+
+.home
+{
+    z-index: 9;
+    height: 110vh;
+    background-image: url("../media/img/home.png");
+    background-size: 100%;
+}
+
+.categories {
+    height: 100vh;
+    background-image: url("../media/img/bg.jpg");
+    background-size: 100%;    
+}
+
+
+.home video:hover {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+footer {
+    margin: 0px;
+    padding: 0px;;
+    height: 17.5vh;
+    background-color: red;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+video
+{
+    grid-template-rows: none;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+}
+
+marquee {
+    margin: 0px;
+    border: 4px solid yellow;
+    border-width: 3px 0 3px 0;
+}
+
+.btn
+{
+    transition: transform 2s ease-in-out;
+    height: 20px;
+    width: 100px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.btn-neon
+{
+    /*La transition en première ligne très importante pour le unhovering effect*/
+    border: 0px;
+    transition: transform 2s ease-in-out;
+    height: 20px;
+    width: 135px;
+    border-radius: 25px;
+    color: white;
+    background:linear-gradient( to top right, rgba(255,87,34,1) 0%,rgba(251,140,0 ,1) 100%);
+    box-shadow: 2px 2px 30px rgba(255,111,0,1);
+    font-family: pixelFont;
+    vertical-align: middle;
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.btn-neon:hover
+{
+    -webkit-transition: -webkit-transform .5s ease-out;
+    -ms-transition: -ms-transform .5s ease-out;
+
+    transition: transform .5s ease-out;
+
+    transform: translate(25px);
+}
+
+.btn-neon a {
+    color:white;
+}
+
+.btn:active {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+
+    transition: transform .8s ease-in-out;
+
+    transform: translate(200px);
+}
+
+
+.btn:hover
+{
+    transition: all 0.5s ease-out;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+
+/* Exclusivement pour la page '/p/starts.html' */
+
+.cards img
+{
+    padding: 10px;
+    margin: 0px 10px;
+    grid-template-rows: none;
+    width:fit-content;
+
+
+    border-radius: 30px;
+
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+
+}
+
+.cards img:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.icon {
+    background-image: url("../media/icons/settings.png");
+    background-size: 100%;
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+    display: block;
+
+    text-align: bottom-center;
+}
+
+.icon span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    color:white;
+    font-size: 18px;
+}
+
+.desktop-app 
+{
+    position: relative;
+    margin: 5px;
+    width: 85px;
+    height: 85px;
+    display: inline-block;
+    text-align:center;
+}
+
+.desktop-app img {
+    background-size: 100%;
+    width: 84px;
+    height: 84px;
+    cursor: pointer;
+}
+
+.desktop-app span 
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+
+}
+
+.terminal 
+{    
+    opacity: .98;
+    width: 800px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: black;
+    color: #01D218;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 1;
+    resize: both;
+}
+
+#draggable
+{
+    opacity: 0.98;
+    width: 800px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: white;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    position: fixed;
+    top: 8%;
+    left: 1%;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 1;
+}
+
+#bottombar 
+{
+    z-index: 1;
+    height: 85px;
+    width: fit-content;
+
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    margin-left:15%; 
+    margin-right:15%;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+    border: #FDC4E6 1px solid;
+    opacity: .8;
+
+    background-color: #FDC4E6;
+}
+
+.bottombar-app 
+{
+    display: inline-block;
+    text-align: bottom-center;
+}
+
+.bottombar-app img 
+{
+    transition: transform 1s ease-in-out;
+    margin: 14px 9px 14px 9px;
+    /*
+    margin: 9px;
+    margin-bottom: 14px;*/
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    background-size: 100%;
+    width: 58px;
+    height: 58px;
+}
+
+.bottombar-app img:hover 
+{
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    -ms-transition: -ms-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.bottombar-app img:focus {
+    background: #f00;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+
+.sidebar { 
+    border-radius: 10px 0 0 10px;
+    margin-right: auto;
+    margin-left: 0;
+    color: black;
+    background-color: #FDC4E6;
+    width: 145px;
+    height: 700px;
+}
+
+.topbar {
+    z-index: 2;
+    margin-right: auto;
+    margin-left: 0;
+    margin: 10px;
+    width: 125px;
+    height: 40px;
+}
+
+.topbar-buttons {
+    height: 20px;
+    width: 75px;
+    position: absolute;
+    left: 19px;
+    top: 19px;
+}
+
+.shortcut-button {
+    color: #454545;
+    text-align: left;
+    position: relative;
+    top: 75px;
+    left: 8px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.shortcut-button:hover
+{
+    height: 20px;
+    border-radius: 9px;
+    border: 2px solid white;
+}
+
+.shortcut-button img {
+    float: left;
+    vertical-align: middle;
+    margin-right: 6px;
+    width: 18px;
+    height: 20px;
+}
+
+.tb {  
+    margin: 1px;
+    display: inline-block;
+    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.green {
+    background-color: #01D218;
+}
+
+.red {
+    background-color: #FE5854;
+}
+
+.orange {
+    background-color: #FDC201;
+}
+
+
+.no-select {
+    user-select: none;
+}
+
+/* Custom right click */
+
+.rightclick {
+    color: black;
+    position: absolute;
+    text-align: center;
+    background: white;
+    border-radius: 9px;
+    text-align: left;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.rightclick ul {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    min-width: 150px;
+    list-style: none;
+}
+
+.rightclick menu ul li {
+    color: black;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border: 1px solid #FDC4E6;
+}
+
+.rightclick menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.rightclick ul li:hover {
+    color: black;
+    background: #FDC4E6;
+}
+
+/* Exclusivement pour la page '/p/random.html' :*/
+
+.random {
+    margin: 0px;
+    height: 110vh;
+}
+
+.random img {
+    margin: 30px;
+}

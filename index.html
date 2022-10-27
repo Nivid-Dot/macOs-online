@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./media/img/apple.png" />
+    <title>macOS</title>
+</head>
+<body>
+
+    <div class = "categories" id = "categories">
+        <!--
+        <div class = "btn">Home</div>
+
+        <div class = "btn-neon">
+            <a href = "./p/neon.html">
+                Neon
+            </a>
+        </div>
+
+        <div class = "btn-neon">
+            <a href = "./index.html"> Home </a>
+        </div>
+
+        <a href = "#">
+            <div class = "btn-neon">
+                Contact
+            </div>
+        </a>
+
+        <div class = "btn-neon" id = "test" onmouseover = "move()">
+            Hernet
+        </div>
+
+        <div class = "btn-neon">
+            Respawn
+        </div>-->
+
+
+        <center>
+            <div class = "desktop-app">
+                <img src = "./media/icons/Calculator.png">
+                <span>Calculator</span>
+            </div>
+            
+            <div class = "desktop-app">
+                <img src = "./media/icons/CloudApp.png">
+                <span>CloudApp</span>
+            </div>
+
+            <div class = "desktop-app" onclick = "respawnFrame()">
+                <img src = "./media/icons/settings.png">
+                <span>Settings</span>
+            </div>
+
+            <div class = "desktop-app" ondblclick = "openTerminal()">
+                <img src = "./media/icons/Terminal.png">
+                <span>Terminal</span>
+            </div>
+        </center>
+        
+        <center>
+            <div class = "no-select" id = "draggable"> 
+                <div class = "sidebar" id = "sidebar">
+                    <div class = "topbar">
+                        <div class = "topbar-buttons">
+                            <!--<div class = "tb red" onclick = "closeFrame()">  </div>-->
+                            <div class = "tb red" onclick = "closeFinder()">  </div>
+                            <div class = "tb orange" onclick = "reduceFrame()"> </div>
+                            <div class = "tb green" onclick = "maximizeFrame()"> </div>    
+                        </div>
+
+                        <h6>Favorites</h6>
+
+                        <div class = "shortcut-button">
+                            <img src ="./media/icons/sidebar/shortcuts/airdrop.png">
+                            Airdrop
+                        </div>
+                        <div class = "shortcut-button">
+                            <img src ="./media/icons/sidebar/shortcuts/applications.png">
+                            Applications
+                        </div>
+
+                        <div class = "shortcut-button">
+                            <img src ="./media/icons/sidebar/shortcuts/desktop.png">
+                            Desktop
+                        </div>
+
+                        <div class = "shortcut-button">
+                            <img src ="./media/icons/sidebar/shortcuts/documents.png">
+                            Documents
+                        </div>
+
+                        <div class = "shortcut-button">
+                            <img src ="./media/icons/sidebar/shortcuts/download.png">
+                            Downloads
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <div id = "bottombar">
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Finder.png" id = "finder" onclick = "openFinder()">
+            </div>            
+            <div class = "bottombar-app">
+                <img src ="./media/icons/App Store.png" id = "appstore">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Safari.png" id = "safari">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Messages.png" id = "message">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Mail.png" id = "mail">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Maps.png" id = "map">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Photos.png" id = "photo">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/FaceTime.png" id = "facetime">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Contacts.png" id = "contact">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Calendar.png" id = "calendar">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Notes.png" id = "note">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Music.png" id = "music">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/iTunes Store.png" id = "itunes">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Twitter.png" id = "twitter" onclick = "openTwitter()">
+            </div>
+
+            <div class = "bottombar-app">
+                <img src ="./media/icons/settings.png" id = "settings">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Photoshop.png" id = "photoshop">
+            </div>
+            <div class = "bottombar-app">
+                <img src ="./media/icons/Trash Managed.png" id = "trash">
+            </div>
+        </div>
+    </div>
+
+    <div id = "trm">
+
+    </div>
+
+    <div id="rightClickMenu" class="rightclick" 
+        style="display:none">
+        <ul>
+            <li><a href="#">Refresh</a></li>
+            <li><a href="#" id = "popTerminal" onclick = "openTerminal()">Open a terminal here</a></li>
+            <li><a href="#">Element-3</a></li>
+            <li><a href="#">Element-4</a></li>
+            <li><a href="#">Element-5</a></li>
+            <li><a href="#">Element-6</a></li>
+            <li><a href="#">Element-7</a></li>
+        </ul>
+    </div>
+
+    <script src="./js/moveButton.js"></script>
+    <script src = "./js/draggableDiv.js"></script>
+    <script src = "./js/customRightClick.js"></script>
+    <script src = "./js/applications.js"></script>
+</body>
+</html>
